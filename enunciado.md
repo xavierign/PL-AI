@@ -135,6 +135,8 @@ La competencia tiene **dos componentes**:
 
 ## Entrega
 
+> **El trabajo es individual.**
+
 Las respuestas se entregan a través del formulario: **[Link al formulario — TBD](#)**
 
 El formulario solicita:
