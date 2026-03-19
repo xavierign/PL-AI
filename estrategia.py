@@ -7,7 +7,7 @@ commodities y devuelve la cantidad de hectáreas (enteros) a destinar
 a cada alternativa.
 
 IMPORTANTE:
-- No usar librerías externas (no imports)
+- Solo se permite importar `pulp` como librería externa
 - La función debe devolver tres enteros
 - La asignación debe respetar TODAS las restricciones:
     * Superficie total: ha_trigo_soja + ha_maiz + ha_soja_1ra <= 600
@@ -17,6 +17,8 @@ IMPORTANTE:
     * Todas las cantidades >= 0
 - Si la asignación viola alguna restricción, se descalifica la entrega
 """
+
+import pulp
 
 # Nombre del grupo (completar)
 GRUPO = "Nombre del grupo"

@@ -83,16 +83,21 @@ Estos costos son proporcionales al ingreso bruto e incluyen flete, comisiones, i
 
 ## Consigna
 
+> **Nota importante:** Este TP es exigente y entendemos que puede resultar abrumador. No se preocupen: respondan lo que puedan, con las herramientas que tengan (papel, Excel, Python, calculadora), y va a estar bien igual. Lo importante es que intenten razonar el problema.
+
 ### Parte A — Modelo y análisis
 
-1. **Formular** un modelo de Programación Lineal que maximice el **margen bruto esperado** del campo para la campaña 2024/25. Utilizar los precios forward 2024/25 y los rendimientos que consideren más apropiados a partir de los datos históricos. Definir claramente:
-   - Variables de decisión
-   - Función objetivo
-   - Restricciones
+1. **Formular** un modelo de Programación Lineal que maximice el **margen bruto esperado** del campo para la campaña 2024/25. Utilizar los precios forward 2024/25 y los rendimientos que consideren más apropiados a partir de los datos históricos. La formulación no es obligatoria pero ayuda a ordenar el razonamiento — pueden presentarla como prefieran (texto, fórmulas, pseudocódigo).
 
-2. **Resolver** el modelo y presentar la solución óptima (hectáreas asignadas a cada alternativa y margen bruto total).
+2. **Resolver** el modelo y reportar la solución óptima:
+   - Hectáreas asignadas a Trigo/Soja 2da (entero, ha)
+   - Hectáreas asignadas a Maíz (entero, ha)
+   - Hectáreas asignadas a Soja 1ra (entero, ha)
+   - Margen bruto total óptimo (entero, USD)
 
-3. **Análisis de sensibilidad**: ¿Cuál es el valor marginal de una hectárea adicional? ¿Y de un dólar adicional de capital?
+3. **Análisis de sensibilidad:**
+   - ¿Cuánto aumenta el margen bruto si se dispone de una hectárea adicional? (entero, USD/ha)
+   - ¿Cuánto aumenta el margen bruto si se dispone de un dólar adicional de capital? (entero, USD/USD — redondeado)
 
 ### Parte B — Incertidumbre
 
@@ -101,9 +106,9 @@ Estos costos son proporcionales al ingreso bruto e incluyen flete, comisiones, i
    - **Normal**: promedio de las 9 campañas
    - **Bueno**: promedio de las 3 mejores campañas
 
-   Resolver el modelo para cada escenario. ¿Cambia la asignación óptima?
+   Resolver el modelo para cada escenario y reportar la asignación óptima y el margen bruto en cada caso.
 
-5. Si el productor fuera **averso al riesgo** y quisiera maximizar el margen bruto del **peor escenario** (criterio maximin), ¿cómo reformularían el modelo? Resolverlo.
+5. Si el productor fuera **averso al riesgo** y quisiera maximizar el margen bruto del **peor escenario** (criterio maximin), resolver el modelo y reportar la asignación y el margen bruto garantizado.
 
 ### Parte C — Competencia
 
@@ -120,7 +125,7 @@ La competencia tiene **dos componentes**:
 7. Además, cada grupo debe implementar la función `asignar(precio_trigo, precio_soja, precio_maiz)` en el mismo archivo `estrategia.py`. La función recibe tres precios y debe devolver una tupla de tres enteros con las hectáreas a destinar a cada alternativa.
 
    **Reglas:**
-   - No se pueden usar librerías externas (no `import`)
+   - Solo se permite importar `pulp` como librería externa
    - La asignación retornada debe respetar **todas las restricciones** del problema
    - Si la función falla o retorna una asignación inválida, se descalifica esa evaluación
 
@@ -128,13 +133,14 @@ La competencia tiene **dos componentes**:
 
 ---
 
-## Entregables
+## Entrega
 
-- Formulación matemática del modelo (puede ser en papel o digital)
-- Código de resolución (Python con PuLP/scipy, R, Excel Solver, o similar)
-- Resultados y análisis para las Partes A y B
-- **Archivo `estrategia.py`** con la asignación fija y la función adaptativa (Parte C)
-- Breve reflexión (máx. 1 página): ¿Qué limitaciones tiene este modelo respecto a la realidad de un productor agropecuario?
+Las respuestas se entregan a través del formulario: **[Link al formulario — TBD](#)**
+
+El formulario solicita:
+- Resultados numéricos de las Partes A y B (enteros)
+- Archivo `estrategia.py` con la asignación fija y la función adaptativa (Parte C)
+- Campo libre de comentarios (no evaluado — pueden usarlo para aclaraciones, explicar su enfoque, o lo que quieran)
 
 ---
 
