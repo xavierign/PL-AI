@@ -129,7 +129,7 @@ La competencia tiene **dos componentes**:
    - La asignación retornada debe respetar **todas las restricciones** del problema
    - Si la función falla o retorna una asignación inválida, se descalifica esa evaluación
 
-   La función será evaluada con **múltiples escenarios de precios** no conocidos de antemano. El grupo cuya función genere el **mayor margen bruto acumulado** en todos los escenarios gana este componente.
+   La función será evaluada con **múltiples escenarios de precios** no conocidos de antemano. El alumno cuya función genere el **mayor margen bruto acumulado** en todos los escenarios gana este componente.
 
 ---
 
@@ -137,7 +137,7 @@ La competencia tiene **dos componentes**:
 
 > **El trabajo es individual.**
 
-Las respuestas se entregan a través del formulario: **[Link al formulario — TBD](#)**
+Las respuestas se entregan a través del formulario: **A confirmar**
 
 El formulario solicita:
 - Resultados numéricos de las Partes A y B (enteros)
