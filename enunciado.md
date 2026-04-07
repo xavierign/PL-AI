@@ -137,7 +137,7 @@ La competencia tiene **dos componentes**:
 
 > **El trabajo es individual.**
 
-Las respuestas se entregan a través del formulario: **[Link al formulario — TBD](#)**
+Las respuestas se entregan a través del formulario: **[Link al formulario](https://forms.gle/udUK5fHAFHJmSyLj8)**
 
 El formulario solicita:
 - Resultados numéricos de las Partes A y B (enteros)

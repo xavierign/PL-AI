@@ -16,18 +16,43 @@ IMPORTANTE:
     * Maíz máximo: ha_maiz <= 300
     * Todas las cantidades >= 0
 - Si la asignación viola alguna restricción, se descalifica la entrega
+- La sección de lectura de datos es obligatoria y no debe modificarse
 """
 
 import pulp
+import csv
+import os
 
-# Nombre del grupo (completar)
-GRUPO = "Nombre del grupo"
+# =============================================================================
+# LECTURA DE DATOS (no modificar esta sección)
+# =============================================================================
+
+_data_dir = os.path.join(os.path.dirname(__file__), "data")
+
+def _leer_csv(nombre):
+    with open(os.path.join(_data_dir, nombre), newline="") as f:
+        return list(csv.DictReader(f))
+
+costos = _leer_csv("costos.csv")
+precios_historicos = _leer_csv("precios_historicos.csv")
+rendimientos = _leer_csv("rendimientos.csv")
+
+# =============================================================================
+# DATOS DEL GRUPO
+# =============================================================================
+
+# Nombre del alumno (completar)
+GRUPO = "Nombre del alumno"
 
 # Asignación fija para la campaña 2024/25 (completar con enteros)
 HA_TRIGO_SOJA = 0
 HA_MAIZ = 0
 HA_SOJA_1RA = 0
 
+
+# =============================================================================
+# FUNCIÓN ADAPTATIVA
+# =============================================================================
 
 def asignar(precio_trigo, precio_soja, precio_maiz):
     """
@@ -41,14 +66,10 @@ def asignar(precio_trigo, precio_soja, precio_maiz):
     Retorna:
         tuple de 3 enteros: (ha_trigo_soja, ha_maiz, ha_soja_1ra)
 
-    Datos que pueden usar dentro de la función:
-        - Rendimientos históricos (pueden hardcodear los promedios u otros)
-        - Costos fijos: T/S = 560, Maíz = 420, Soja = 280 USD/ha
-        - Costos variables: T/S = 25%, Maíz = 28%, Soja = 23% del ingreso bruto
-        - Capital máximo: 250000 USD
-        - Superficie: 600 ha
-        - Gramíneas mínimo: 120 ha
-        - Maíz máximo: 300 ha
+    Datos disponibles (ya cargados arriba):
+        - rendimientos: lista de dicts con rendimientos históricos por campaña
+        - precios_historicos: lista de dicts con precios históricos por campaña
+        - costos: lista de dicts con costos fijos y variables por alternativa
     """
 
     # --- Implementar su estrategia aquí ---
